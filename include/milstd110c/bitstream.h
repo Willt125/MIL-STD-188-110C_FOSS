@@ -1,10 +1,12 @@
-#ifndef BITSTREAM_H
-#define BITSTREAM_H
+#ifndef MILSTD110C_BITSTREAM_H
+#define MILSTD110C_BITSTREAM_H
 
 #include <algorithm>
 #include <cstdint>
 #include <stdexcept>
 #include <vector>
+
+namespace mil::std110c {
 
 /**
  * @class BitStream
@@ -223,10 +225,11 @@ private:
     size_t max_bit_idx; ///< The total number of bits in the stream.
 };
 
-BitStream operator+(const BitStream& lhs, const BitStream& rhs) {
+inline BitStream operator+(const BitStream& lhs, const BitStream& rhs) {
     BitStream result = lhs;
     result += rhs;
     return result;
 }
 
+} /* namespace mil::std110c */
 #endif
