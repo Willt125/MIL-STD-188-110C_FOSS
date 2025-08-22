@@ -42,3 +42,6 @@
 
 # VSCode files
 /.vscode
+
+# Build files
+/build
